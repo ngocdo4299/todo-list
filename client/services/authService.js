@@ -18,11 +18,10 @@ export const signIn = async (username, password) => {
         role: decodedToken.role
       }
     } else {
-      throw new Error(response)
+      throw new Error("Unable to sign-in! Please check your username and password then try again!")
     }
   } catch (error) {
-    console.log(error);
-    throw new Error(error)
+    throw new Error(error?.message || error)
   }
 };
 

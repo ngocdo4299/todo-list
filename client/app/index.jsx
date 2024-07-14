@@ -33,7 +33,7 @@ const Welcome = () => {
       setIsLogged(true);
       router.replace("/home");
     } catch (error) {
-      Alert.alert("Error", error.message);
+      Alert.alert("Error", error?.message || error);
     } finally {
       setSubmitting(false);
     }

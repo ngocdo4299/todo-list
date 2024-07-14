@@ -24,7 +24,6 @@ exports.getTaskById = async (req, res) => {
       res.status(404).send('Task not found');
     }
   } catch (error) {
-    console.error(error)
     res.status(500).send('Something went wrong!');
   }
 };

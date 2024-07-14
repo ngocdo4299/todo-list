@@ -9,8 +9,7 @@ export const getAllTask = async () => {
       throw new Error("Something went wrong")
     }
   } catch (error) {
-    console.log(error);
-    throw new Error(error)
+    throw new Error(error?.message || error)
   }
 }
 
@@ -23,7 +22,7 @@ export const getTask = async (id) => {
       throw new Error("Something went wrong")
     }
   } catch (error) {
-    throw new Error(error)
+    throw new Error(error?.message || error)
   }
 }
 
@@ -45,8 +44,7 @@ export const updateTask = async (id, data) => {
       throw new Error("Something went wrong")
     }
   } catch (error) {
-    console.log(error);
-    throw new Error(error)
+    throw new Error(error?.message || error)
   }
 }
 
@@ -59,7 +57,6 @@ export const deleteTask = async (id) => {
       throw new Error("Something went wrong")
     }
   } catch (error) {
-    console.log(error);
-    throw new Error(error)
+    throw new Error(error?.message || error)
   }
 }

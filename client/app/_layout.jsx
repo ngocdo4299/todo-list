@@ -16,7 +16,6 @@ const RootLayout = () => {
   });
 
   useEffect(() => {
-    console.log("init global provider");
     if (error) throw error;
 
     if (fontsLoaded) {

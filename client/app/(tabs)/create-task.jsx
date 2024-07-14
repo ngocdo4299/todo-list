@@ -26,7 +26,7 @@ const Create = () => {
 
       router.replace("/home");
     } catch (error) {
-      Alert.alert("Error", error.message);
+      Alert.alert("Error", error?.message || error);
     } finally {
       setForm({
         name: "",

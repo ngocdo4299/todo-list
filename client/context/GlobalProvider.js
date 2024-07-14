@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { getCurrentUser } from "../services/authService";
+import { Alert } from "react-native";
 
 const GlobalContext = createContext();
 export const useGlobalContext = () => useContext(GlobalContext);
@@ -12,7 +13,6 @@ const GlobalProvider = ({ children }) => {
   useEffect(() => {
     getCurrentUser()
       .then((res) => {
-        console.log("GlobalContext", res)
         if (res) {
           setIsLogged(true);
           setUser(res);
@@ -22,7 +22,7 @@ const GlobalProvider = ({ children }) => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        Alert.alert('Error', "Can't retrieve user data!")
       })
       .finally(() => {
         setLoading(false);

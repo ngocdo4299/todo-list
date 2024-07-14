@@ -4,6 +4,7 @@
   "description": "Back end service for TODO list app",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,11 +17,6 @@
     "jsonwebtoken": "^9.0.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
-  },
-  "devDependencies": {
-    "chai": "^5.1.1",
-    "chai-http": "^5.0.0",
-    "mocha": "^10.6.0"
   },
   "private": true
 }
